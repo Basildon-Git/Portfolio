@@ -1,0 +1,267 @@
+ @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(image/home-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-left: 9%;
+  padding-right: 9%;
+  letter-spacing: 2px;
+}
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+}
+span {
+  color: #f1270c;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 1.2rem;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  color: #f1270c;
+  cursor: pointer;
+}
+.contact p {
+  color: #fff;
+  background: #f1270c;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+}
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translateY(-50%);
+}
+.home-content h4,
+.home-content h1,
+.home-content h3,
+.home-content p {
+  color: #fff;
+  padding: 0.3rem 0;
+  letter-spacing: 2px;
+}
+.home-content p {
+  line-height: 1.5rem;
+}
+.btn,
+.box-btn {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  background-color: #f1270c;
+  border: none;
+  border-radius: 3rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.btn:hover,
+.box-btn:hover {
+  background-color: #df402b;
+}
+.about-me {
+  padding: 2rem 9%;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-me img {
+  height: 40rem;
+  width: 25rem;
+  border-radius: 0.2rem;
+  object-fit: cover;
+  flex: 1 1 40rem;
+}
+.about-me .about-text {
+  width: 550px;
+  flex: 1 1 40rem;
+  padding: 1.5rem 1.8rem;
+}
+.about-text h1 {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+}
+.about-text h2 {
+  color: #fff;
+  padding: 0.6rem 0;
+  letter-spacing: 2px;
+}
+.about-text p {
+  color: #fcfc;
+  line-height: 1.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+/**************************Technologies-section************************/
+.technologies {
+  width: 100%;
+  background-color: #141414;
+}
+.heading {
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.tech-container {
+  margin: 2rem 9%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  gap: 1.5rem;
+}
+.tech-box {
+  flex: 1 1 15rem;
+  padding: 1rem;
+  text-align: center;
+}
+.tech-box img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+  border: solid 0.7rem #fcfc;
+  border-radius: 50%;
+}
+
+.boxes-container {
+  padding: 2.5rem 9%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.boxes-container .boxes {
+  height: 20rem;
+  flex: 1 1 15rem;
+  border: solid 0.3rem #fcfc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.boxes-container .boxes img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.boxes-container .boxes .content {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 6, 19, 0.3);
+  padding: 2rem;
+  text-align: center;
+}
+.boxes-container .boxes .content h3 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.boxes-container .boxes .content p {
+  font-size: 1.0rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.boxes-container .boxes:hover .content a {
+  text-decoration: none;
+}
+.boxes-container .boxes:hover .content {
+  top: 0;
+}
+
+/**************************Hire-section************************/
+.hire-me {
+  width: 100%;
+  background-color: #191919;
+}
+.hire-text {
+  margin: 1rem 9%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hire-text p {
+  padding: 1rem;
+  color: #fcfc;
+  letter-spacing: 2px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+.btn-two {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  background-color: #f1270c;
+  border: none;
+  border-radius: 3rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.btn-two:hover {
+  background-color: #df402b;
+}
+
+/**************************Footer-section************************/
+.footer {
+  width: 100%;
+  background-color: #141414;
+}
+.footer-container {
+  padding: 1rem 9%;
+  text-align: center;
+}
+.footer-container h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.8rem;
+}
+.social {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.social a i{
+  color: #f1270c;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.social a i:hover {
+  transform: translateY(-8px);
+}
+.footer-container p {
+  color: #fcfc;
+  font-size: 1.1rem;
+  padding-top: 2rem;
+}
