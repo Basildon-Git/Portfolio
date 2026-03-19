@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Meta Tag -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="google-adsense-account" content="ca-pub-1473339863480367">
+    <meta name="google-adsense-account" content="ca-pub-1473339863480367" />
 
     <!-- SEO -->
     <meta
@@ -17,7 +17,13 @@
     <meta name="copyright" content="Basildon Shumba" />
     <meta name="robots" content="index,follow" />
 
-    <title>Basildon Shumba</title>
+    <title>Basildon Digital</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -32,630 +38,1194 @@
     <link rel="stylesheet" type="text/css" href="css/plugin.css" />
 
     <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <title>Basildon Shumba | Java Software Developer</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3F6478",
+              secondary: "#1E88E5",
+              light: "#F5F7FA",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+      module.exports = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  <body class="bg-white text-gray-800">
-
-    <!-- Fixed Navbar -->
-    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-        <div class="container mx-auto flex justify-between items-center p-4">
-          <!-- Logo -->
-          <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-blue-900 text-white-400 flex items-center justify-center rounded-full font-bold text-lg shadow">
-              BS
-            </div>
-            <span class="hidden md:inline font-semibold text-blue-900 text-lg">
-              Basildon
-            </span>
-          </div>
-      
-          <!-- Nav Toggle Button -->
-          <button id="nav-toggle" class="md:hidden focus:outline-none">
-            <svg
-              class="w-6 h-6 text-blue-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-      
-          <!-- Desktop Nav -->
-          <nav id="nav-menu" class="hidden md:flex space-x-6">
-            <a href="#home" class="text-blue-900 hover:text-orange-500">Home</a>
-            <a href="#about" class="text-blue-900 hover:text-orange-500">About</a>
-            <a href="#projects" class="text-blue-900 hover:text-orange-500">Projects</a>
-            <a href="#contact" class="text-blue-900 hover:text-orange-500">Contact</a>
-          </nav>
-        </div>
-      
-        <!-- Mobile Nav -->
-        <div id="mobile-nav" class="md:hidden hidden bg-white border-t px-4 pb-4 space-y-2">
-          <a href="#home" class="block text-blue-900 hover:text-orange-500">Home</a>
-          <a href="#about" class="block text-blue-900 hover:text-orange-500">About</a>
-          <a href="#projects" class="block text-blue-900 hover:text-orange-500">Projects</a>
-          <a href="#contact" class="block text-blue-900 hover:text-orange-500">Contact</a>
-        </div>
-      </header>
-      
-
-    <!-- Hero / Home Section -->
-    <section
-      id="home"
-      class="h-screen bg-cover bg-center relative pt-20"
-      style="background-image: url('images/home-page.jpg')"
+  <body class="bg-light text-gray-800 font-roboto">
+    <!-- Navbar -->
+    <header
+      class="fixed w-full top-0 z-50 bg-white backdrop-blur-md shadow-md transition-all duration-300 gradient-bg-1"
     >
-      <!-- Gradient Overlay -->
       <div
-        class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-orange-600/40 to-blue-600/30"
-      ></div>
-
-      <!-- Content on top -->
-      <div
-        class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4"
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
-          Welcome to My Portfolio
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img
+            src="./images/logo.png"
+            alt="Basildon Logo"
+            class="w-40 h-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+
+        <!-- Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-8 font-medium text-gray-700"
+        >
+          <a
+            href="#"
+            class="hover:text-secondary transition-colors duration-200"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="hover:text-secondary transition-colors duration-200"
+            >Services</a
+          >
+          <a
+            href="#portfolio"
+            class="hover:text-secondary transition-colors duration-200"
+            >Portfolio</a
+          >
+          <a
+            href="#tools"
+            class="hover:text-secondary transition-colors duration-200"
+            >Tools</a
+          >
+          <a
+            href="#about"
+            class="hover:text-secondary transition-colors duration-200"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-secondary transition-colors duration-200"
+            >Contact</a
+          >
+          <a
+            href="https://wa.me/message/COMUFSAVLLX6P1"
+            target="_blank"
+            class="bg-secondary text-blue-600 px-5 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+          >
+            <!-- WhatsApp Icon -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+              class="w-4 h-4"
+              style="
+                filter: brightness(0) saturate(100%) invert(32%) sepia(93%)
+                  saturate(500%) hue-rotate(180deg);
+              "
+            />
+
+            Get Started
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-primary text-2xl hover:text-secondary transition-colors"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden px-6 pb-4 space-y-2 bg-white/90 backdrop-blur-md rounded-b-lg shadow-lg"
+      >
+        <a href="#" class="block py-2 hover:text-secondary transition-colors"
+          >Home</a
+        >
+        <a
+          href="#services"
+          class="block py-2 hover:text-secondary transition-colors"
+          >Services</a
+        >
+        <a
+          href="#portfolio"
+          class="block py-2 hover:text-secondary transition-colors"
+          >Portfolio</a
+        >
+        <a
+          href="#tools"
+          class="block py-2 hover:text-secondary transition-colors"
+          >Tools</a
+        >
+        <a
+          href="#about"
+          class="block py-2 hover:text-secondary transition-colors"
+          >About</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 hover:text-secondary transition-colors"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="relative overflow-hidden">
+      <div
+        id="slider"
+        class="flex transition-transform duration-700 ease-in-out"
+      >
+        <!-- Slide 1 -->
+        <div class="min-w-full min-h-screen flex items-center gradient-bg-1">
+          <div
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
+          >
+            <!-- Text -->
+            <div>
+              <h1
+                class="text-5xl md:text-6xl font-extrabold text-primary leading-tight mb-6"
+              >
+                Building Modern
+                <span class="text-secondary">Web Experiences</span>
+              </h1>
+
+              <p class="text-lg text-blue-900/70 mb-8">
+                I create scalable and elegant web applications with Java &
+                modern frontend technologies.
+              </p>
+
+              <div class="flex gap-6">
+                <!-- Glowing Gradient Button -->
+                <a
+                  href="#"
+                  class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+                >
+                  Get Started
+                </a>
+
+                <!-- Outline Glowing Button -->
+                <a
+                  href="#"
+                  class="px-8 py-4 rounded-xl border-2 border-blue-500 text-blue-600 font-semibold hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-400/50 transition-all duration-300"
+                >
+                  View Work
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="relative">
+              <div
+                class="bg-white/60 backdrop-blur-xl p-6 rounded-2xl shadow-xl"
+              >
+                <div class="flex items-center gap-3 mb-2 text-secondary">
+                  <i data-lucide="code"></i>
+                  <h3 class="font-semibold">Full Stack Development</h3>
+                </div>
+                <p class="text-sm text-blue-900/60">
+                  Spring Boot • Angular • REST APIs
+                </p>
+              </div>
+
+              <div
+                class="absolute -top-6 -right-6 w-24 h-24 bg-secondary/20 rounded-full animate-pulse-slow blur-xl"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="min-w-full min-h-screen flex items-center gradient-bg-2">
+          <div
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
+          >
+            <!-- Text Column -->
+            <div>
+              <h1 class="text-5xl font-bold text-primary mb-4">
+                Clean & <span class="text-secondary">Creative UI</span>
+              </h1>
+              <p class="text-blue-900/70 mb-8">
+                Designing intuitive interfaces that feel smooth, modern, and
+                user-focused.
+              </p>
+
+              <a
+                href="#"
+                class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+              >
+                Explore Designs
+              </a>
+            </div>
+
+            <!-- Card Column -->
+            <div
+              class="bg-white/50 backdrop-blur-lg p-8 rounded-2xl shadow-lg flex flex-col items-center"
+            >
+              <!-- Centered Rounded Image -->
+              <img
+                src="./images/ui.jpg"
+                alt="Creative UI"
+                class="w-40 h-40 md:w-40 md:h-40 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-4"
+              />
+              <div class="flex items-center gap-3 text-secondary">
+                <i data-lucide="layout-dashboard"></i>
+                <p class="text-blue-900/70">Minimal • Elegant • Functional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="min-w-full min-h-screen flex items-center gradient-bg-3">
+          <div
+            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
+          >
+            <!-- Text Column -->
+            <div>
+              <h1 class="text-5xl font-bold text-primary mb-4">
+                Enterprise <span class="text-secondary">Solutions</span>
+              </h1>
+              <p class="text-blue-900/70 mb-8">
+                Secure and scalable backend systems built with Java and Spring
+                Boot.
+              </p>
+
+              <a
+                href="#"
+                class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <!-- Card Column with Centered Image -->
+            <div
+              class="bg-white/60 backdrop-blur-xl p-8 rounded-2xl shadow-xl flex flex-col items-center"
+            >
+              <!-- Centered Rounded Image -->
+              <img
+                src="./images/enterprise.jpg"
+                alt="Enterprise Solutions"
+                class="w-40 h-40 md:w-40 md:h-40 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-4"
+              />
+              <div class="flex items-center gap-3 text-secondary">
+                <i data-lucide="server"></i>
+                <p class="text-blue-900/70">Secure • Scalable • Reliable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="min-w-full min-h-screen flex items-center gradient-bg-1">
+          <div
+            class="max-w-7xl mx-auto text-center px-6 flex flex-col items-center"
+          >
+            <h1 class="text-5xl font-bold text-primary mb-4">
+              Responsive Across All Devices
+            </h1>
+
+            <!-- Centered Rounded Image -->
+            <img
+              src="./images/device.jpg"
+              alt="Responsive Devices"
+              class="w-50 h-50 md:w-60 md:h-60 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-6"
+            />
+
+            <p class="text-blue-900/70 mb-8">
+              Seamless experience across mobile, tablet, and desktop.
+            </p>
+
+            <div
+              class="bg-white/60 inline-flex items-center gap-6 px-8 py-6 rounded-2xl shadow-lg text-secondary justify-center"
+            >
+              <i data-lucide="smartphone"></i>
+              <i data-lucide="laptop"></i>
+              <i data-lucide="monitor"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="min-w-full min-h-screen flex items-center gradient-bg-2">
+          <div
+            class="max-w-7xl mx-auto text-center px-6 flex flex-col items-center"
+          >
+            <h1 class="text-5xl font-bold text-primary mb-4">
+              Let’s Build Something Great
+            </h1>
+
+            <!-- Centered Rounded Image -->
+            <img
+              src="./images/code.jpg"
+              alt="Build Something Great"
+              class="w-50 h-50 md:w-60 md:h-60 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-6"
+            />
+
+            <p class="text-blue-900/70 mb-8">
+              Let’s turn your ideas into powerful digital solutions.
+            </p>
+
+            <a
+              href="#"
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dots -->
+      <div class="absolute bottom-8 w-full flex justify-center gap-3">
+        <span
+          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+        ></span>
+        <span
+          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+        ></span>
+      </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section
+      class="relative py-24 gradient-bg-3 overflow-hidden"
+      id="portfolio"
+    >
+      <!-- Header -->
+      <div class="max-w-7xl mx-auto px-6 text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">
+          Our <span class="text-secondary">Work</span>
         </h2>
-        <p class="text-xl md:text-2xl text-orange-300 max-w-2xl">
-          I'm <span class="font-semibold">Basildon Shumba</span>, a passionate
-          Java Software Developer building scalable, robust, and elegant
-          solutions.
+        <p class="text-blue-900/70 max-w-2xl mx-auto">
+          A selection of projects we’ve crafted to help businesses grow and
+          thrive digitally.
         </p>
-        <p class="text-lg md:text-xl text-blue mt-4 max-w-2xl">
-          I specialize in back-end systems, API design, and full-stack web
+      </div>
+
+      <!-- Projects -->
+      <div class="space-y-24">
+        <!-- Project 1 -->
+        <div
+          class="portfolio-item flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
+        >
+          <!-- Image -->
+          <div class="md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="./images/ecraser.jpg"
+              alt="Ecraser Systems"
+              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
+            />
+          </div>
+
+          <!-- Text -->
+          <div class="md:w-1/2 flex flex-col items-center md:items-start">
+            <!-- Logo -->
+            <img
+              src="./images/ecraser-logo.png"
+              alt="Ecraser Systems Logo"
+              class="w-32 h-auto mb-4"
+            />
+            <h3
+              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500 mb-4"
+            >
+              Ecraser Systems Pvt Ltd
+            </h3>
+
+            <p
+              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
+            >
+              A trusted industrial consultancy serving Mineral Processing,
+              Cement Production, Waste-water Treatment, Sugar Processing, and
+              Power Generation industries.
+            </p>
+
+            <a
+              href="https://ecrasersystems.co.zw/"
+              target="_blank"
+              class="portfolio-btn"
+            >
+              Visit Website →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 (reverse) -->
+        <div
+          class="portfolio-item flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
+        >
+          <div class="md:w-1/2 flex justify-center md:justify-start">
+            <img
+              src="./images/techlovers.jpg"
+              alt="Tech Lovers"
+              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
+            />
+          </div>
+
+          <div class="md:w-1/2 flex flex-col items-center md:items-start">
+            <!-- Logo -->
+            <img
+              src="./images/techlovers-logo.png"
+              alt="Tech Lovers Logo"
+              class="w-32 h-auto mb-4"
+            />
+            <h3
+              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-blue-500 mb-4"
+            >
+              Tech Lovers Investments
+            </h3>
+
+            <p
+              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
+            >
+              A technology company delivering high-quality gadgets including
+              laptops, smartphones, TVs, and more — serving both retail and
+              wholesale clients across Zimbabwe.
+            </p>
+
+            <a
+              href="https://techlovers.co.zw/"
+              target="_blank"
+              class="portfolio-btn"
+            >
+              Visit Website →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="portfolio-item flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
+        >
+          <div class="md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="./images/netmarch.jpg"
+              alt="Netmarch"
+              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
+            />
+          </div>
+
+          <div class="md:w-1/2 flex flex-col items-center md:items-start">
+            <!-- Logo -->
+            <img
+              src="./images/netmarch-logo.png"
+              alt="Netmarch Logo"
+              class="w-32 h-auto mb-4"
+            />
+            <h3
+              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"
+            >
+              Netmarch Technologies
+            </h3>
+
+            <p
+              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
+            >
+              Experts in networking, cybersecurity, and IT services — helping
+              businesses improve efficiency and strengthen digital security.
+            </p>
+
+            <a
+              href="https://netmarch.co.zw/"
+              target="_blank"
+              class="portfolio-btn"
+            >
+              Visit Website →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section
+      class="relative py-24 gradient-bg-2 min-w-full min-h-screen overflow-hidden"
+      id="services"
+    >
+      <!-- Section Header -->
+      <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-primary mb-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+        >
+          What We <span class="text-secondary">Offer</span>
+        </h2>
+        <p class="text-blue-900/70 max-w-2xl mx-auto">
+          We provide modern digital solutions to help your business grow, scale,
+          and stand out online.
+        </p>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div class="service-card reveal">
+          <i data-lucide="globe"></i>
+          <h3>Professional Websites</h3>
+          <p>Modern, responsive, high-performance websites.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <i data-lucide="mail"></i>
+          <h3>Business Emails</h3>
+          <p>Custom domain emails for credibility.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <i data-lucide="briefcase"></i>
+          <h3>Company Portfolios</h3>
+          <p>Showcase your brand beautifully.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <i data-lucide="link"></i>
+          <h3>Domain Registration</h3>
+          <p>Secure your brand identity.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <i data-lucide="server"></i>
+          <h3>Enterprise Software</h3>
+          <p>Scalable and secure systems.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <i data-lucide="lightbulb"></i>
+          <h3>Consultancy</h3>
+          <p>Expert digital strategy guidance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Technologies Section -->
+    <section id="tools" class="relative py-24 gradient-bg-1 overflow-hidden">
+      <!-- Title -->
+      <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-primary mb-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+        >
+          Tools & <span class="text-secondary">Technologies</span>
+        </h2>
+        <p class="text-blue-900/70 max-w-2xl mx-auto">
+          These are the tools and frameworks I use to build modern web
           applications.
         </p>
-        <p class="text-lg md:text-xl text-white mt-2 max-w-2xl">
-          Let's build something amazing together — clean, efficient, and
-          user-focused.
-        </p>
+      </div>
+
+      <!-- Icons Container -->
+      <div
+        class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-12"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+          alt="Java"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+          alt="Spring Boot"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg"
+          alt="Hibernate"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+          alt="MySQL"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          alt="PostgreSQL"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://img.icons8.com/color/48/microsoft-sql-server.png"
+          alt="MS SQL Server"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          alt="HTML5"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          alt="CSS3"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+          alt="TypeScript"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+          alt="Angular"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          alt="GitHub"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+          alt="Git"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+          alt="Tailwind CSS"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+          alt="IntelliJ IDEA"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+          alt="Postman"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+          alt="VS Code"
+          class="tool-icon w-14 h-14"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+          alt="Windows"
+          class="tool-icon w-14 h-14"
+        />
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h3 class="text-4xl font-bold text-blue-700 text-center mb-10">
-          About Me
-        </h3>
+    <section id="about" class="relative py-24 gradient-bg-1 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Content (LEFT) -->
+        <div class="space-y-6">
+          <!-- Title (FULL WIDTH) -->
+          <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2
+              class="about-item text-4xl md:text-5xl font-extrabold leading-tight"
+            >
+              <span
+                class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+              >
+                About Us
+              </span>
+            </h2>
+          </div>
 
-        <!-- Main Description -->
-        <div
-          class="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed text-center"
-        >
-          <p class="mb-6">
-            I'm
-            <span class="font-semibold text-blue-800">Basildon Shumba</span>, a
-            dedicated software developer with a strong interest in stakeholder
-            collaboration and a knack for solving complex challenges. My
-            experience spans across technologies like Java (Spring Framework and
-            Swing), JavaScript, HTML, CSS, and SQL databases — allowing me to
-            build robust, user-focused applications.
-          </p>
-          <p class="mb-6">
-            One of my key strengths is working closely with stakeholders
-            throughout the development process. I value clear communication and
-            collaboration with clients, users, and team members to ensure
-            solutions meet real needs and expectations. I enjoy turning ideas
-            into practical, effective software by fostering transparency,
-            managing feedback, and ensuring a smooth delivery process.
-          </p>
-          <p>
-            I'm always learning and staying updated with the latest trends in
-            software development. I believe in the power of technology to make a
-            difference, and I'm passionate about contributing to projects that
-            create meaningful impact.
-          </p>
+          <!-- Main Text -->
+          <div
+            class="about-item bg-white/60 backdrop-blur-xl p-6 rounded-2xl shadow-xl"
+          >
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">
+              Who We Are
+            </h3>
+
+            <p class="text-blue-900/70 leading-relaxed">
+              We create professional websites, business emails, and company
+              portfolios, plus domain registration services to help your brand
+              thrive online. We also provide consultancy and enterprise software
+              development, delivering scalable and secure digital solutions
+              tailored to your business.
+            </p>
+          </div>
+
+          <!-- Features -->
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
+            >
+              <i data-lucide="globe" class="text-secondary"></i>
+              <p class="text-blue-900/80">Web Development</p>
+            </div>
+
+            <div
+              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
+            >
+              <i data-lucide="mail" class="text-secondary"></i>
+              <p class="text-blue-900/80">Business Emails</p>
+            </div>
+
+            <div
+              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
+            >
+              <i data-lucide="building" class="text-secondary"></i>
+              <p class="text-blue-900/80">Company Portfolios</p>
+            </div>
+
+            <div
+              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
+            >
+              <i data-lucide="cpu" class="text-secondary"></i>
+              <p class="text-blue-900/80">Enterprise Software</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="about-item">
+            <a
+              href="#contact"
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+            >
+              Work With Us
+            </a>
+          </div>
         </div>
 
-        <!-- Skills Cards -->
-        <div class="mt-16 grid gap-8 md:grid-cols-3">
-          <!-- Card 1 -->
-          <div
-            class="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-          >
-            <div
-              class="flex items-center justify-center w-12 h-12 mx-auto mb-4 text-blue-700"
-            >
-              <!-- Code Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 18l6-6-6-6M8 6l-6 6 6 6"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-center text-blue-800 mb-2">
-              Full-Stack Development
-            </h4>
-            <p class="text-center text-gray-600">
-              Experience with Java, Spring Boot, Swing, HTML, CSS, JavaScript,
-              and SQL for building complete web applications.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-          >
-            <div
-              class="flex items-center justify-center w-12 h-12 mx-auto mb-4 text-orange-500"
-            >
-              <!-- Users Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-center text-blue-800 mb-2">
-              Stakeholder Collaboration
-            </h4>
-            <p class="text-center text-gray-600">
-              Strong communication skills and commitment to aligning development
-              with business and user needs.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
-          >
-            <div
-              class="flex items-center justify-center w-12 h-12 mx-auto mb-4 text-blue-700"
-            >
-              <!-- Light Bulb Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11 3a7 7 0 00-7 7c0 2.21 1.79 4 4 4h.5v2a1 1 0 001 1h2a1 1 0 001-1v-2H16c2.21 0 4-1.79 4-4a7 7 0 00-7-7z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-center text-blue-800 mb-2">
-              Problem Solving
-            </h4>
-            <p class="text-center text-gray-600">
-              A natural problem solver who enjoys tackling challenges with
-              clean, efficient code and thoughtful architecture.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools I Use Section -->
-<section class="bg-gray-100 py-8 overflow-hidden">
-    <div class="container mx-auto px-4">
-      <div class="relative w-full overflow-x-hidden">
-        <div
-          class="flex gap-10 animate-marquee whitespace-nowrap"
-        >
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" alt="Hibernate" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-14 h-14" />
-        <img src="https://img.icons8.com/color/48/microsoft-sql-server.png" alt="MS SQL Server" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-14 h-14" />
-        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA" class="w-14 h-14" />
-        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-14 h-14" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" class="w-14 h-14" />
-      </div>
-    </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h3 class="text-4xl font-bold text-blue-700 text-center mb-12">
-          Projects
-        </h3>
-
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Asset360 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-orange-500">
-              <!-- Device icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17h4.5m-6-2.25h7.5M6.75 6h10.5A1.5 1.5 0 0118.75 7.5v9A1.5 1.5 0 0117.25 18H6.75A1.5 1.5 0 015.25 16.5v-9A1.5 1.5 0 016.75 6z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              Asset360
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Developed and deployed an IT asset, funding, and license
-              registration system using Java Swing, Hibernate, and Apache POI.
-              Features Excel reporting, FlatLaf UI, and full deployment via
-              Launch4j/Inno Setup. Acted as Product Owner using JIRA for
-              stakeholder requirement tracking.
-            </p>
-          </div>
-
-          <!-- FMS360 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-blue-600">
-              <!-- Fuel icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 3H8a1 1 0 00-1 1v18l2-1 2 1 2-1 2 1V4a1 1 0 00-1-1z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              FMS360
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Fuel Management System for Turbo Mining using Java Swing and
-              Hibernate. Tracks daily fuel usage, stock, and department-wise
-              allocation. Includes KPI dashboard and exportable reports.
-              Contributed to back-end logic and agile delivery.
-            </p>
-          </div>
-
-          <!-- Turbo360 -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-orange-500">
-              <!-- Clock icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6v6l4 2m5-4a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              Turbo360
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Java-based clocking system using Zebra scanners for QR code
-              scanning. Handles overtime and worked hours. Excel reporting with
-              Apache POI, modern UI via FlatLaf. Served as product owner for
-              feature planning and delivery.
-            </p>
-          </div>
-
-          <!-- Netmarch Website -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-blue-600">
-              <!-- Globe icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 4a8 8 0 100 16 8 8 0 000-16zm0 0v16m0-8H4m8 0h8"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              Netmarch Technologies
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Developed a clean and professional website using HTML, CSS, and
-              JavaScript to showcase cybersecurity and networking services.
-              Focused on responsive layout and branding for Netmarch
-              Technologies.
-            </p>
-          </div>
-
-          <!-- Real Estate Marketplace -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-orange-500">
-              <!-- Home icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 10l9-7 9 7v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V13H9v7a2 2 0 01-2 2H3a2 2 0 01-2-2V10z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              Real Estate Marketplace
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Property listing and smart matching system using satisfaction
-              score algorithm. Developed with Java, SQL, Spring Boot, and
-              Thymeleaf. Focused on user experience and data-driven search.
-            </p>
-          </div>
-
-          <!-- Portfolio Website -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl border border-orange-200 transition"
-          >
-            <div class="flex justify-center mb-4 text-blue-600">
-              <!-- User icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5.121 17.804A12.094 12.094 0 0112 15c2.05 0 3.97.49 5.655 1.352M15 10a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold text-blue-800 mb-2 text-center">
-              Portfolio Website
-            </h4>
-            <p class="text-gray-700 text-sm text-justify">
-              Fully responsive portfolio site showcasing projects and skills.
-              Built with Tailwind CSS and HTML, focused on clean UI and smooth
-              navigation.
-            </p>
-          </div>
+        <!-- Image (RIGHT) -->
+        <div class="about-item flex justify-center">
+          <img
+            src="./images/about.jpg"
+            alt="About Us"
+            class="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-2xl shadow-2xl border-4 border-blue-300"
+          />
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4 text-center">
-        <h3 class="text-4xl font-bold text-blue-700 mb-4">Contact Me</h3>
-        <p class="mb-8 text-gray-700 text-lg">
-          Interested in working together? Let's talk!
-        </p>
-
-        <div class="flex flex-col items-center gap-4 mb-8">
-          <!-- Email -->
-          <a
-            href="mailto:basildonshumba@gmail.com"
-            class="flex items-center gap-3 text-orange-600 hover:text-orange-700 font-medium"
-          >
-            <!-- Mail icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M16 12H8m0 0l-4 4m4-4l-4-4m16 0l-4 4m0 0l4 4m-4-4H8"
-              />
-            </svg>
-            basildonshumba@gmail.com
-          </a>
-
-          <!-- Phone -->
-          <div class="flex items-center gap-3 text-blue-700 font-medium">
-            <!-- Phone icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5h2l.4 2M7 5h10l1 5h-1l-1 2-2-1-2 3 1 2-2 1-1-1H5a2 2 0 01-2-2V5z"
-              />
-            </svg>
-            +263 776 679 801
-          </div>
+    <section id="contact" class="relative py-24 gradient-bg-1 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-contact"
+      >
+        <!-- Left: Image -->
+        <div class="flex justify-center">
+          <img
+            src="./images/contact.jpg"
+            alt="Customer Support"
+            class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-4 border-blue-300"
+          />
         </div>
 
-        <!-- CTA Button -->
-        <a
-          href="mailto:basildonshumba@gmail.com"
-          class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition"
-        >
-          Send an Email
-        </a>
+        <!-- Right: Content -->
+        <div>
+          <h2
+            class="text-4xl md:text-5xl font-extrabold text-primary mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+          >
+            Get In <span class="text-secondary">Touch</span>
+          </h2>
+
+          <p class="text-blue-900/70 mb-8">
+            Have a project in mind or need a professional website? Reach out and
+            let’s build something amazing together.
+          </p>
+
+          <!-- Contact Info -->
+          <div class="space-y-4 mb-8">
+            <p class="text-blue-900/80">
+              Email: <span class="font-semibold">info@basildon.co.zw</span>
+            </p>
+            <p class="text-blue-900/80">
+              Phone:
+              <span class="font-semibold">+263 776 679 801</span>
+            </p>
+            <p class="text-blue-900/80">
+              WhatsApp:
+              <span class="font-semibold">+263 711 616 964</span>
+            </p>
+            <p class="text-blue-900/80">
+              Open Hours:
+              <span class="font-semibold"
+                >Sunday – Fri (8:00 AM – 5:00 PM)</span
+              >
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-400/50 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61580684531598"
+              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-400/50 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="https://wa.me/message/COMUFSAVLLX6P1"
+              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-green-400/50 transition"
+            >
+              <img
+                src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
+              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-500/50 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                class="w-6 h-6"
+              />
+            </a>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="mt-10">
+            <a
+              href="https://wa.me/message/COMUFSAVLLX6P1"
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
+            >
+              Send Message
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-6">
+    <footer
+      class="relative bg-white border-t border-blue-100 py-12 overflow-hidden"
+    >
+      <!-- Glow Background Accent -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="w-72 h-72 bg-blue-400/20 blur-3xl rounded-full absolute -top-10 -left-10"
+        ></div>
+        <div
+          class="w-72 h-72 bg-indigo-400/20 blur-3xl rounded-full absolute bottom-0 right-0"
+        ></div>
+      </div>
+
       <div
-        class="container mx-auto px-4 flex flex-col items-center justify-center"
+        class="relative max-w-7xl mx-auto px-6 text-center flex flex-col items-center"
       >
-        <!-- Social Media Links -->
-        <div class="flex space-x-6 mb-3">
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/basildon-shumba-b038a3202/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            class="hover:text-orange-400 transition"
-          >
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 
-            0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 
-            0-1.75-.78-1.75-1.75s.78-1.75 
-            1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 
-            1.75zm13.5 11.3h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
-            0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.76 
-            1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 
-            4.56v5.63z"
-              />
-            </svg>
-          </a>
+        <!-- Logo -->
+        <img
+          src="./images/logo.png"
+          alt="Basildon Logo"
+          class="w-44 mb-4 opacity-90 hover:opacity-100 transition duration-300"
+        />
 
-          <!-- GitHub -->
-          <a
-            href="https://github.com/Basildon-Git"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="hover:text-orange-400 transition"
+        <!-- Brand Name -->
+        <h3 class="text-2xl md:text-3xl font-extrabold mb-2 tracking-wide">
+          <span
+            class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
           >
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 0C5.37 0 0 5.37 0 
-            12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 
-            0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.34-1.78-1.34-1.78-1.1-.75.08-.74.08-.74 
-            1.22.09 1.87 1.25 1.87 1.25 1.08 1.86 2.83 1.32 
-            3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 
-            0-1.32.47-2.4 1.24-3.25-.12-.3-.54-1.51.12-3.15 
-            0 0 1.01-.32 3.3 1.23a11.52 11.52 0 0 1 
-            3.01-.4c1.02.01 2.05.14 3.01.4 2.29-1.55 
-            3.3-1.23 3.3-1.23.66 1.64.24 2.85.12 3.15.77.85 
-            1.24 1.93 1.24 3.25 0 4.63-2.81 5.66-5.49 
-            5.95.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 
-            3.28 0 .32.22.69.83.57A12.01 12.01 0 0 0 24 
-            12c0-6.63-5.37-12-12-12z"
-              />
-            </svg>
-          </a>
+            Basildon
+          </span>
+          <span class="text-blue-900/80 ml-1"> Digital </span>
+        </h3>
 
-          <!-- WhatsApp -->
+        <!-- Tagline -->
+        <p class="text-blue-900/70 mb-6 max-w-md">
+          Building modern, scalable, and impactful digital solutions.
+        </p>
+
+        <!-- Divider -->
+        <div
+          class="w-24 h-1 mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6"
+        ></div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-6 mb-6">
+          <a href="" class="footer-icon">
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
+              class="w-5 h-5"
+            />
+          </a>
           <a
-            href="https://web.whatsapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            class="hover:text-orange-400 transition"
+            href="https://www.facebook.com/profile.php?id=61580684531598"
+            class="footer-icon"
           >
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M20.52 3.48A11.91 11.91 0 0012 
-            0C5.37 0 0 5.37 0 12a11.92 11.92 0 001.63 
-            6.01L0 24l6.18-1.61A11.9 11.9 0 0012 
-            24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zm-8.45 
-            18.45a9.9 9.9 0 01-5.05-1.4l-.36-.22-3.67.96.98-3.58-.23-.37a9.89 
-            9.89 0 1116.27-3.11 9.91 9.91 0 01-7.94 7.72zm5.42-7.53c-.3-.15-1.78-.88-2.06-.98s-.48-.15-.68.15-.78.98-.96 
-            1.18-.36.23-.66.08a8.05 8.05 0 01-2.37-1.46 8.96 8.96 0 01-1.67-2.07c-.18-.3-.02-.46.13-.61.13-.13.3-.36.45-.53s.23-.3.34-.5.05-.38-.02-.53-.68-1.64-.93-2.23c-.24-.6-.48-.51-.68-.52h-.58c-.2 
-            0-.52.07-.79.38s-1.04 1.02-1.04 2.48 1.07 2.87 1.22 
-            3.06c.15.18 2.1 3.2 5.09 4.48.71.3 1.26.48 
-            1.69.62.71.23 1.36.2 1.86.12.57-.08 1.78-.73 
-            2.03-1.43.25-.71.25-1.3.17-1.43s-.27-.21-.57-.36z"
-              />
-            </svg>
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+              class="w-5 h-5"
+            />
+          </a>
+          <a href="https://wa.me/message/COMUFSAVLLX6P1" class="footer-icon">
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+              class="w-5 h-5"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
+            class="footer-icon"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+              class="w-5 h-5"
+            />
           </a>
         </div>
 
         <!-- Copyright -->
-        <p class="text-sm text-white">
-          &copy; 2025 Basildon Shumba. All rights reserved.
+        <p class="text-sm text-blue-900/60">
+          © 2026 Basildon Digital. All rights reserved.
+        </p>
+
+        <!-- Credit -->
+        <p class="text-sm mt-2 text-blue-900/70">
+          Proudly designed by
+          <a
+            href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
+            target="_blank"
+            class="font-semibold text-secondary hover:underline"
+          >
+            Basil
+          </a>
         </p>
       </div>
     </footer>
-
-    <!-- Toggle Script -->
-    <script>
-      const toggle = document.getElementById("nav-toggle");
-      const mobileMenu = document.getElementById("mobile-nav");
-
-      toggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
   </body>
+
+  <!-- Script -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+  <script>
+    lucide.createIcons();
+
+    const slider = document.getElementById("slider");
+    const dots = document.querySelectorAll(".dot");
+
+    let index = 0;
+    const totalSlides = 5;
+
+    function showSlide(i) {
+      slider.style.transform = `translateX(-${i * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("bg-white", idx === i);
+        dot.classList.toggle("bg-white/50", idx !== i);
+      });
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    }
+
+    // Auto slide
+    setInterval(nextSlide, 5000);
+
+    // Dots click
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        index = i;
+        showSlide(index);
+      });
+    });
+
+    // Swipe support
+    let startX = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      let endX = e.changedTouches[0].clientX;
+
+      if (startX - endX > 50) {
+        nextSlide();
+      } else if (endX - startX > 50) {
+        index = (index - 1 + totalSlides) % totalSlides;
+        showSlide(index);
+      }
+    });
+
+    showSlide(index);
+  </script>
+  <!-- Services -->
+  <script>
+    const cards = document.querySelectorAll(".service-card");
+
+    function revealSequential() {
+      const triggerPoint = window.innerHeight - 100;
+
+      cards.forEach((card, index) => {
+        const top = card.getBoundingClientRect().top;
+
+        if (top < triggerPoint && top > 0) {
+          setTimeout(() => {
+            card.classList.add("active");
+          }, index * 150);
+        } else {
+          card.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealSequential);
+  </script>
+  <!-- Portfolio -->
+  <script>
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    function revealPortfolio() {
+      const trigger = window.innerHeight - 100;
+
+      portfolioItems.forEach((item, index) => {
+        const top = item.getBoundingClientRect().top;
+
+        if (top < trigger && top > -100) {
+          setTimeout(() => {
+            item.classList.add("active");
+          }, index * 200);
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealPortfolio);
+  </script>
+  <!-- Portfolio Animation Script -->
+  <script>
+    const toolIcons = document.querySelectorAll(".tool-icon");
+
+    // Set initial state
+    toolIcons.forEach((icon) => {
+      icon.classList.add("opacity-0", "translate-y-6");
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate icons one by one
+            toolIcons.forEach((icon, index) => {
+              setTimeout(() => {
+                icon.classList.remove("opacity-0", "translate-y-6");
+                icon.classList.add("opacity-100", "translate-y-0");
+              }, index * 150); // 150ms stagger
+            });
+          } else {
+            // Reset icons to animate again when re-entering
+            toolIcons.forEach((icon) => {
+              icon.classList.add("opacity-0", "translate-y-6");
+              icon.classList.remove("opacity-100", "translate-y-0");
+            });
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(document.querySelector("#tools"));
+  </script>
+
+  <!--Tools Animation Script -->
+  <script>
+    const contactSection = document.querySelector(".animate-contact");
+
+    const contactObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            contactSection.classList.add("opacity-100", "translate-y-0");
+            contactSection.classList.remove("opacity-0", "translate-y-12");
+          } else {
+            contactSection.classList.add("opacity-0", "translate-y-12");
+            contactSection.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    contactObserver.observe(contactSection);
+  </script>
+
+  <!-- About -->
+  <script>
+    const aboutItems = document.querySelectorAll(".about-item");
+
+    // initial state
+    aboutItems.forEach((item) => {
+      item.classList.add("opacity-0", "translate-y-10");
+    });
+
+    const aboutObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            aboutItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.remove("opacity-0", "translate-y-10");
+                item.classList.add("opacity-100", "translate-y-0");
+              }, index * 150);
+            });
+          } else {
+            // reset when leaving view
+            aboutItems.forEach((item) => {
+              item.classList.add("opacity-0", "translate-y-10");
+              item.classList.remove("opacity-100", "translate-y-0");
+            });
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    aboutObserver.observe(document.querySelector("#about"));
+  </script>
 </html>
