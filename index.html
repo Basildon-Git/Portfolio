@@ -1,775 +1,583 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Meta Tag -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="google-adsense-account" content="ca-pub-1473339863480367" />
 
-    <!-- SEO -->
+    <title>Basildon Digital | Java Software Developer – Harare, Zimbabwe</title>
     <meta
       name="description"
-      content="Basildon Shumba is a dedicated Full-Stack Java Developer with a passion for building dynamic and responsive web applications. With expertise in both front-end and back-end technologies, he delivers innovative solutions that enhance user experiences and drive business success. Committed to continuous learning and excellence, Basildon thrives in collaborative environments and is dedicated to turning ideas into reality."
+      content="Basildon Shumba is a dedicated Full-Stack Java Developer building dynamic, responsive web applications. Websites, business emails, domains and enterprise software in Zimbabwe."
     />
-    <meta name="author" content="Basildon" />
-    <meta name="url" content="http://www.basildon.co.zw" />
+    <meta name="author" content="Basildon Shumba" />
     <meta name="copyright" content="Basildon Shumba" />
     <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b0f1f" />
 
-    <title>Basildon Digital</title>
-
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="144x144"
-      type="image/x-icon"
       href="images/apple-touch-icon.png"
     />
 
-    <!-- All CSS Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/plugin.css" />
-
-    <!-- Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap"
       rel="stylesheet"
     />
 
-    <title>Basildon Shumba | Java Software Developer</title>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3F6478",
-              secondary: "#1E88E5",
-              light: "#F5F7FA",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-      module.exports = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Roboto", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link href="styles.css" rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-light text-gray-800 font-roboto">
-    <!-- Navbar -->
-    <header
-      class="fixed w-full top-0 z-50 bg-white backdrop-blur-md shadow-md transition-all duration-300 gradient-bg-1"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <img
-            src="./images/logo.png"
-            alt="Basildon Logo"
-            class="w-40 h-auto object-contain transition-transform duration-300 hover:scale-105"
-          />
-        </div>
 
-        <!-- Navigation -->
-        <nav
-          class="hidden md:flex items-center gap-8 font-medium text-gray-700"
-        >
-          <a
-            href="#"
-            class="hover:text-secondary transition-colors duration-200"
-            >Home</a
-          >
-          <a
-            href="#services"
-            class="hover:text-secondary transition-colors duration-200"
-            >Services</a
-          >
-          <a
-            href="#portfolio"
-            class="hover:text-secondary transition-colors duration-200"
-            >Portfolio</a
-          >
-          <a
-            href="#tools"
-            class="hover:text-secondary transition-colors duration-200"
-            >Tools</a
-          >
-          <a
-            href="#about"
-            class="hover:text-secondary transition-colors duration-200"
-            >About</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-secondary transition-colors duration-200"
-            >Contact</a
-          >
+  <body>
+    <!-- ========== LOGO SPRITE (reused in header + footer) ========== -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="bdGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#22d3ee" />
+          <stop offset="0.55" stop-color="#6366f1" />
+          <stop offset="1" stop-color="#ec4899" />
+        </linearGradient>
+      </defs>
+
+      <symbol id="bd-mark" viewBox="0 0 100 100">
+        <!-- hexagon shell -->
+        <path
+          d="M50 4 L90 27 V73 L50 96 L10 73 V27 Z"
+          fill="#0b0f1f"
+          stroke="url(#bdGrad)"
+          stroke-width="5"
+          stroke-linejoin="round"
+        />
+        <!-- stylised B -->
+        <path
+          d="M34 26 V74 M34 26 H53 a12 12 0 0 1 0 24 H34 M34 50 H56 a12.5 12.5 0 0 1 0 24 H34"
+          fill="none"
+          stroke="url(#bdGrad)"
+          stroke-width="7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <!-- anime sparkle -->
+        <path
+          d="M78 10 L81 19 L90 22 L81 25 L78 34 L75 25 L66 22 L75 19 Z"
+          fill="#f472b6"
+        />
+        <!-- code chevrons -->
+        <path
+          d="M22 44 L15 50 L22 56"
+          fill="none"
+          stroke="#22d3ee"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity=".9"
+        />
+      </symbol>
+    </svg>
+
+    <div class="scroll-progress" id="progress"></div>
+    <canvas id="petals-layer" class="petals" aria-hidden="true"></canvas>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#home" class="logo" aria-label="Basildon Digital home">
+          <svg class="logo__mark"><use href="#bd-mark" /></svg>
+          <span class="logo__text">
+            <strong>Basildon</strong>
+            <small>DIGITAL</small>
+          </span>
+        </a>
+
+        <nav class="nav__links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#tools">Tools</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
           <a
             href="https://wa.me/message/COMUFSAVLLX6P1"
             target="_blank"
-            class="bg-secondary text-blue-600 px-5 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+            rel="noopener"
+            class="btn btn--sm"
           >
-            <!-- WhatsApp Icon -->
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
-              class="w-4 h-4"
-              style="
-                filter: brightness(0) saturate(100%) invert(32%) sepia(93%)
-                  saturate(500%) hue-rotate(180deg);
-              "
-            />
-
-            Get Started
+            <i data-lucide="message-circle"></i> Get Started
           </a>
         </nav>
 
-        <!-- Mobile Menu Button -->
-        <button
-          id="menuBtn"
-          class="md:hidden text-primary text-2xl hover:text-secondary transition-colors"
-        >
-          ☰
+        <button class="burger" id="menuBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
         </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        id="mobileMenu"
-        class="hidden md:hidden px-6 pb-4 space-y-2 bg-white/90 backdrop-blur-md rounded-b-lg shadow-lg"
-      >
-        <a href="#" class="block py-2 hover:text-secondary transition-colors"
-          >Home</a
-        >
-        <a
-          href="#services"
-          class="block py-2 hover:text-secondary transition-colors"
-          >Services</a
-        >
-        <a
-          href="#portfolio"
-          class="block py-2 hover:text-secondary transition-colors"
-          >Portfolio</a
-        >
-        <a
-          href="#tools"
-          class="block py-2 hover:text-secondary transition-colors"
-          >Tools</a
-        >
-        <a
-          href="#about"
-          class="block py-2 hover:text-secondary transition-colors"
-          >About</a
-        >
-        <a
-          href="#contact"
-          class="block py-2 hover:text-secondary transition-colors"
-          >Contact</a
-        >
       </div>
     </header>
 
-    <!-- Hero Slider -->
-    <section class="relative overflow-hidden">
-      <div
-        id="slider"
-        class="flex transition-transform duration-700 ease-in-out"
-      >
-        <!-- Slide 1 -->
-        <div class="min-w-full min-h-screen flex items-center gradient-bg-1">
-          <div
-            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
-          >
-            <!-- Text -->
-            <div>
-              <h1
-                class="text-5xl md:text-6xl font-extrabold text-primary leading-tight mb-6"
-              >
-                Building Modern
-                <span class="text-secondary">Web Experiences</span>
-              </h1>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="speedlines" aria-hidden="true"></div>
+      <div class="halftone" aria-hidden="true"></div>
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="kanji kanji--hero" aria-hidden="true">デジタル</div>
 
-              <p class="text-lg text-blue-900/70 mb-8">
-                I create scalable and elegant web applications with Java &
-                modern frontend technologies.
+      <div class="container hero__inner">
+        <div class="slides" id="slides">
+          <!-- Slide 1 -->
+          <article class="slide active">
+            <div class="slide__text">
+              <span class="tag anim"
+                ><i data-lucide="sparkles"></i> Full-Stack Java Developer</span
+              >
+              <h1 class="anim">
+                Building Modern <span class="grad">Web Experiences</span>
+              </h1>
+              <p class="anim">
+                I create scalable, elegant web applications with Java and modern
+                frontend technologies.
               </p>
-
-              <div class="flex gap-6">
-                <!-- Glowing Gradient Button -->
-                <a
-                  href="#"
-                  class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-                >
-                  Get Started
-                </a>
-
-                <!-- Outline Glowing Button -->
-                <a
-                  href="#"
-                  class="px-8 py-4 rounded-xl border-2 border-blue-500 text-blue-600 font-semibold hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-400/50 transition-all duration-300"
-                >
-                  View Work
-                </a>
+              <div class="btn-row anim">
+                <a href="#contact" class="btn">Get Started</a>
+                <a href="#portfolio" class="btn btn--ghost">View Work</a>
               </div>
             </div>
-
-            <!-- Visual -->
-            <div class="relative">
-              <div
-                class="bg-white/60 backdrop-blur-xl p-6 rounded-2xl shadow-xl"
-              >
-                <div class="flex items-center gap-3 mb-2 text-secondary">
-                  <i data-lucide="code"></i>
-                  <h3 class="font-semibold">Full Stack Development</h3>
-                </div>
-                <p class="text-sm text-blue-900/60">
-                  Spring Boot • Angular • REST APIs
-                </p>
-              </div>
-
-              <div
-                class="absolute -top-6 -right-6 w-24 h-24 bg-secondary/20 rounded-full animate-pulse-slow blur-xl"
-              ></div>
+            <div class="slide__card glass anim">
+              <div class="card-icon"><i data-lucide="code-2"></i></div>
+              <h3>Full Stack Development</h3>
+              <p>Spring Boot • Angular • REST APIs</p>
+              <div class="bar"><i style="--w: 92%"></i></div>
+              <div class="bar"><i style="--w: 86%"></i></div>
+              <div class="bar"><i style="--w: 78%"></i></div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- Slide 2 -->
-        <div class="min-w-full min-h-screen flex items-center gradient-bg-2">
-          <div
-            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
-          >
-            <!-- Text Column -->
-            <div>
-              <h1 class="text-5xl font-bold text-primary mb-4">
-                Clean & <span class="text-secondary">Creative UI</span>
+          <!-- Slide 2 -->
+          <article class="slide">
+            <div class="slide__text">
+              <span class="tag anim"><i data-lucide="palette"></i> Design</span>
+              <h1 class="anim">
+                Clean &amp; <span class="grad">Creative UI</span>
               </h1>
-              <p class="text-blue-900/70 mb-8">
-                Designing intuitive interfaces that feel smooth, modern, and
+              <p class="anim">
+                Intuitive interfaces that feel smooth, modern and completely
                 user-focused.
               </p>
-
-              <a
-                href="#"
-                class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-              >
-                Explore Designs
-              </a>
-            </div>
-
-            <!-- Card Column -->
-            <div
-              class="bg-white/50 backdrop-blur-lg p-8 rounded-2xl shadow-lg flex flex-col items-center"
-            >
-              <!-- Centered Rounded Image -->
-              <img
-                src="./images/ui.jpg"
-                alt="Creative UI"
-                class="w-40 h-40 md:w-40 md:h-40 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-4"
-              />
-              <div class="flex items-center gap-3 text-secondary">
-                <i data-lucide="layout-dashboard"></i>
-                <p class="text-blue-900/70">Minimal • Elegant • Functional</p>
+              <div class="btn-row anim">
+                <a href="#services" class="btn">Explore Services</a>
               </div>
             </div>
-          </div>
-        </div>
+            <div class="slide__card glass anim">
+              <div class="card-icon">
+                <i data-lucide="layout-dashboard"></i>
+              </div>
+              <h3>Minimal • Elegant • Functional</h3>
+              <p>Pixel-perfect layouts with buttery animations.</p>
+              <div class="chips">
+                <span>UI</span><span>UX</span><span>Branding</span
+                ><span>Motion</span>
+              </div>
+            </div>
+          </article>
 
-        <!-- Slide 3 -->
-        <div class="min-w-full min-h-screen flex items-center gradient-bg-3">
-          <div
-            class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
-          >
-            <!-- Text Column -->
-            <div>
-              <h1 class="text-5xl font-bold text-primary mb-4">
-                Enterprise <span class="text-secondary">Solutions</span>
+          <!-- Slide 3 -->
+          <article class="slide">
+            <div class="slide__text">
+              <span class="tag anim"
+                ><i data-lucide="shield-check"></i> Enterprise</span
+              >
+              <h1 class="anim">
+                Enterprise <span class="grad">Solutions</span>
               </h1>
-              <p class="text-blue-900/70 mb-8">
-                Secure and scalable backend systems built with Java and Spring
+              <p class="anim">
+                Secure, scalable backend systems built with Java and Spring
                 Boot.
               </p>
-
-              <a
-                href="#"
-                class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-              >
-                Learn More
-              </a>
-            </div>
-
-            <!-- Card Column with Centered Image -->
-            <div
-              class="bg-white/60 backdrop-blur-xl p-8 rounded-2xl shadow-xl flex flex-col items-center"
-            >
-              <!-- Centered Rounded Image -->
-              <img
-                src="./images/enterprise.jpg"
-                alt="Enterprise Solutions"
-                class="w-40 h-40 md:w-40 md:h-40 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-4"
-              />
-              <div class="flex items-center gap-3 text-secondary">
-                <i data-lucide="server"></i>
-                <p class="text-blue-900/70">Secure • Scalable • Reliable</p>
+              <div class="btn-row anim">
+                <a href="#about" class="btn">Learn More</a>
               </div>
             </div>
-          </div>
+            <div class="slide__card glass anim">
+              <div class="card-icon"><i data-lucide="server"></i></div>
+              <h3>Secure • Scalable • Reliable</h3>
+              <p>Built to handle real business load.</p>
+              <div class="chips">
+                <span>Java</span><span>Spring</span><span>SQL</span
+                ><span>APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="slide">
+            <div class="slide__text">
+              <span class="tag anim"
+                ><i data-lucide="smartphone"></i> Responsive</span
+              >
+              <h1 class="anim">
+                Responsive Across <span class="grad">All Devices</span>
+              </h1>
+              <p class="anim">
+                A seamless experience across mobile, tablet and desktop.
+              </p>
+              <div class="btn-row anim">
+                <a href="#portfolio" class="btn">See Examples</a>
+              </div>
+            </div>
+            <div class="slide__card glass anim center">
+              <div class="device-row">
+                <i data-lucide="smartphone"></i><i data-lucide="tablet"></i
+                ><i data-lucide="laptop"></i><i data-lucide="monitor"></i>
+              </div>
+              <p>One codebase. Every screen.</p>
+            </div>
+          </article>
+
+          <!-- Slide 5 -->
+          <article class="slide">
+            <div class="slide__text">
+              <span class="tag anim"
+                ><i data-lucide="rocket"></i> Let's go</span
+              >
+              <h1 class="anim">
+                Let's Build <span class="grad">Something Great</span>
+              </h1>
+              <p class="anim">
+                Let's turn your ideas into powerful digital solutions.
+              </p>
+              <div class="btn-row anim">
+                <a href="#contact" class="btn">Contact Me</a>
+              </div>
+            </div>
+            <div class="slide__card glass anim center">
+              <div class="sfx">DON!</div>
+              <p>Your idea. My code. Launch day.</p>
+            </div>
+          </article>
         </div>
 
-        <!-- Slide 4 -->
-        <div class="min-w-full min-h-screen flex items-center gradient-bg-1">
-          <div
-            class="max-w-7xl mx-auto text-center px-6 flex flex-col items-center"
-          >
-            <h1 class="text-5xl font-bold text-primary mb-4">
-              Responsive Across All Devices
-            </h1>
+        <div class="dots" id="dots"></div>
+      </div>
 
-            <!-- Centered Rounded Image -->
-            <img
-              src="./images/device.jpg"
-              alt="Responsive Devices"
-              class="w-50 h-50 md:w-60 md:h-60 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-6"
-            />
+      <div class="scroll-hint"><span></span></div>
+    </section>
 
-            <p class="text-blue-900/70 mb-8">
-              Seamless experience across mobile, tablet, and desktop.
-            </p>
+    <!-- ========== STATS STRIP ========== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <b data-count="3">0</b><span>Featured Clients</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="6">0</b><span>Core Services</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="18">0</b><span>Technologies</span>
+        </div>
+        <div class="stat reveal">
+          <b data-count="100" data-suffix="%">0</b><span>Commitment</span>
+        </div>
+      </div>
+    </section>
 
-            <div
-              class="bg-white/60 inline-flex items-center gap-6 px-8 py-6 rounded-2xl shadow-lg text-secondary justify-center"
-            >
-              <i data-lucide="smartphone"></i>
-              <i data-lucide="laptop"></i>
-              <i data-lucide="monitor"></i>
+    <!-- ========== SERVICES ========== -->
+    <section class="section" id="services">
+      <div class="kanji kanji--section" aria-hidden="true">サービス</div>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// services</span>
+          <h2>What We <span class="grad">Offer</span></h2>
+          <p>
+            Modern digital solutions to help your business grow, scale and stand
+            out online.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card service reveal tilt">
+            <i data-lucide="globe"></i>
+            <h3>Professional Websites</h3>
+            <p>Modern, responsive, high-performance websites.</p>
+          </div>
+          <div class="card service reveal tilt">
+            <i data-lucide="mail"></i>
+            <h3>Business Emails</h3>
+            <p>Custom domain emails for credibility.</p>
+          </div>
+          <div class="card service reveal tilt">
+            <i data-lucide="briefcase"></i>
+            <h3>Company Portfolios</h3>
+            <p>Showcase your brand beautifully.</p>
+          </div>
+          <div class="card service reveal tilt">
+            <i data-lucide="link"></i>
+            <h3>Domain Registration</h3>
+            <p>Secure your brand identity.</p>
+          </div>
+          <div class="card service reveal tilt">
+            <i data-lucide="server"></i>
+            <h3>Enterprise Software</h3>
+            <p>Scalable and secure systems.</p>
+          </div>
+          <div class="card service reveal tilt">
+            <i data-lucide="lightbulb"></i>
+            <h3>Consultancy</h3>
+            <p>Expert digital strategy guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PORTFOLIO ========== -->
+    <section class="section section--alt" id="portfolio">
+      <div class="kanji kanji--section" aria-hidden="true">作品</div>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// portfolio</span>
+          <h2>Our <span class="grad">Work</span></h2>
+          <p>
+            A selection of projects we've crafted to help businesses grow and
+            thrive digitally.
+          </p>
+        </div>
+
+        <div class="projects">
+          <!-- Project 1 -->
+          <div class="project reveal">
+            <div class="project__img">
+              <img
+                src="./images/ecraser.jpg"
+                alt="Ecraser Systems"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <img
+                src="./images/ecraser-logo.png"
+                alt="Ecraser Systems logo"
+                class="project__logo"
+              />
+              <span class="num">01</span>
+              <h3>Ecraser Systems Pvt Ltd</h3>
+              <p>
+                A trusted industrial consultancy serving Mineral Processing,
+                Cement Production, Waste-water Treatment, Sugar Processing and
+                Power Generation industries.
+              </p>
+              <a
+                href="https://ecrasersystems.co.zw/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--sm"
+                >Visit Website →</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project project--rev reveal">
+            <div class="project__img">
+              <img
+                src="./images/techlovers.jpg"
+                alt="Tech Lovers"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <img
+                src="./images/techlovers-logo.png"
+                alt="Tech Lovers logo"
+                class="project__logo"
+              />
+              <span class="num">02</span>
+              <h3>Tech Lovers Investments</h3>
+              <p>
+                A technology company delivering high-quality gadgets including
+                laptops, smartphones, TVs and more — serving retail and
+                wholesale clients across Zimbabwe.
+              </p>
+              <a
+                href="https://techlovers.co.zw/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--sm"
+                >Visit Website →</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project reveal">
+            <div class="project__img">
+              <img src="./images/netmarch.jpg" alt="Netmarch" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <img
+                src="./images/netmarch-logo.png"
+                alt="Netmarch logo"
+                class="project__logo"
+              />
+              <span class="num">03</span>
+              <h3>Netmarch Technologies</h3>
+              <p>
+                Experts in networking, cybersecurity and IT services — helping
+                businesses improve efficiency and strengthen digital security.
+              </p>
+              <a
+                href="https://netmarch.co.zw/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--sm"
+                >Visit Website →</a
+              >
             </div>
           </div>
         </div>
-
-        <!-- Slide 5 -->
-        <div class="min-w-full min-h-screen flex items-center gradient-bg-2">
-          <div
-            class="max-w-7xl mx-auto text-center px-6 flex flex-col items-center"
-          >
-            <h1 class="text-5xl font-bold text-primary mb-4">
-              Let’s Build Something Great
-            </h1>
-
-            <!-- Centered Rounded Image -->
-            <img
-              src="./images/code.jpg"
-              alt="Build Something Great"
-              class="w-50 h-50 md:w-60 md:h-60 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105 mb-6"
-            />
-
-            <p class="text-blue-900/70 mb-8">
-              Let’s turn your ideas into powerful digital solutions.
-            </p>
-
-            <a
-              href="#"
-              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-            >
-              Contact Me
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dots -->
-      <div class="absolute bottom-8 w-full flex justify-center gap-3">
-        <span
-          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
-        ></span>
-        <span
-          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
-        ></span>
-        <span
-          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
-        ></span>
-        <span
-          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
-        ></span>
-        <span
-          class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
-        ></span>
       </div>
     </section>
 
-    <!-- Portfolio section -->
-    <section
-      class="relative py-24 gradient-bg-3 overflow-hidden"
-      id="portfolio"
-    >
-      <!-- Header -->
-      <div class="max-w-7xl mx-auto px-6 text-center mb-20">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-          Our <span class="text-secondary">Work</span>
-        </h2>
-        <p class="text-blue-900/70 max-w-2xl mx-auto">
-          A selection of projects we’ve crafted to help businesses grow and
-          thrive digitally.
-        </p>
-      </div>
-
-      <!-- Projects -->
-      <div class="space-y-24">
-        <!-- Project 1 -->
-        <div
-          class="portfolio-item flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
-        >
-          <!-- Image -->
-          <div class="md:w-1/2 flex justify-center md:justify-end">
-            <img
-              src="./images/ecraser.jpg"
-              alt="Ecraser Systems"
-              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
-            />
-          </div>
-
-          <!-- Text -->
-          <div class="md:w-1/2 flex flex-col items-center md:items-start">
-            <!-- Logo -->
-            <img
-              src="./images/ecraser-logo.png"
-              alt="Ecraser Systems Logo"
-              class="w-32 h-auto mb-4"
-            />
-            <h3
-              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500 mb-4"
-            >
-              Ecraser Systems Pvt Ltd
-            </h3>
-
-            <p
-              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
-            >
-              A trusted industrial consultancy serving Mineral Processing,
-              Cement Production, Waste-water Treatment, Sugar Processing, and
-              Power Generation industries.
-            </p>
-
-            <a
-              href="https://ecrasersystems.co.zw/"
-              target="_blank"
-              class="portfolio-btn"
-            >
-              Visit Website →
-            </a>
-          </div>
+    <!-- ========== TOOLS ========== -->
+    <section class="section" id="tools">
+      <div class="kanji kanji--section" aria-hidden="true">道具</div>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// tech stack</span>
+          <h2>Tools &amp; <span class="grad">Technologies</span></h2>
+          <p>
+            The tools and frameworks I use to build modern web applications.
+          </p>
         </div>
 
-        <!-- Project 2 (reverse) -->
-        <div
-          class="portfolio-item flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
-        >
-          <div class="md:w-1/2 flex justify-center md:justify-start">
+        <div class="tools">
+          <div class="tool">
             <img
-              src="./images/techlovers.jpg"
-              alt="Tech Lovers"
-              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
-            />
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java"
+            /><span>Java</span>
           </div>
-
-          <div class="md:w-1/2 flex flex-col items-center md:items-start">
-            <!-- Logo -->
+          <div class="tool">
             <img
-              src="./images/techlovers-logo.png"
-              alt="Tech Lovers Logo"
-              class="w-32 h-auto mb-4"
-            />
-            <h3
-              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-blue-500 mb-4"
-            >
-              Tech Lovers Investments
-            </h3>
-
-            <p
-              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
-            >
-              A technology company delivering high-quality gadgets including
-              laptops, smartphones, TVs, and more — serving both retail and
-              wholesale clients across Zimbabwe.
-            </p>
-
-            <a
-              href="https://techlovers.co.zw/"
-              target="_blank"
-              class="portfolio-btn"
-            >
-              Visit Website →
-            </a>
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+              alt="Spring Boot"
+            /><span>Spring Boot</span>
           </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div
-          class="portfolio-item flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-7xl mx-auto px-6"
-        >
-          <div class="md:w-1/2 flex justify-center md:justify-end">
+          <div class="tool">
             <img
-              src="./images/netmarch.jpg"
-              alt="Netmarch"
-              class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-400 shadow-xl transition transform group-hover:scale-105"
-            />
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg"
+              alt="Hibernate"
+            /><span>Hibernate</span>
           </div>
-
-          <div class="md:w-1/2 flex flex-col items-center md:items-start">
-            <!-- Logo -->
+          <div class="tool">
             <img
-              src="./images/netmarch-logo.png"
-              alt="Netmarch Logo"
-              class="w-32 h-auto mb-4"
-            />
-            <h3
-              class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"
-            >
-              Netmarch Technologies
-            </h3>
-
-            <p
-              class="text-blue-900/70 mb-6 leading-relaxed text-center md:text-left"
-            >
-              Experts in networking, cybersecurity, and IT services — helping
-              businesses improve efficiency and strengthen digital security.
-            </p>
-
-            <a
-              href="https://netmarch.co.zw/"
-              target="_blank"
-              class="portfolio-btn"
-            >
-              Visit Website →
-            </a>
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="MySQL"
+            /><span>MySQL</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL"
+            /><span>PostgreSQL</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://img.icons8.com/color/48/microsoft-sql-server.png"
+              alt="MS SQL Server"
+            /><span>SQL Server</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+            /><span>HTML5</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+            /><span>CSS3</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+            /><span>JavaScript</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+            /><span>TypeScript</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+              alt="Angular"
+            /><span>Angular</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+            /><span>GitHub</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+            /><span>Git</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+              alt="Tailwind CSS"
+            /><span>Tailwind</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+              alt="IntelliJ IDEA"
+            /><span>IntelliJ</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+              alt="Postman"
+            /><span>Postman</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt="VS Code"
+            /><span>VS Code</span>
+          </div>
+          <div class="tool">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+              alt="Windows"
+            /><span>Windows</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services section -->
-    <section
-      class="relative py-24 gradient-bg-2 min-w-full min-h-screen overflow-hidden"
-      id="services"
-    >
-      <!-- Section Header -->
-      <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-        <h2
-          class="text-4xl md:text-5xl font-extrabold text-primary mb-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
-        >
-          What We <span class="text-secondary">Offer</span>
-        </h2>
-        <p class="text-blue-900/70 max-w-2xl mx-auto">
-          We provide modern digital solutions to help your business grow, scale,
-          and stand out online.
-        </p>
-      </div>
-
-      <div
-        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <div class="service-card reveal">
-          <i data-lucide="globe"></i>
-          <h3>Professional Websites</h3>
-          <p>Modern, responsive, high-performance websites.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <i data-lucide="mail"></i>
-          <h3>Business Emails</h3>
-          <p>Custom domain emails for credibility.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <i data-lucide="briefcase"></i>
-          <h3>Company Portfolios</h3>
-          <p>Showcase your brand beautifully.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <i data-lucide="link"></i>
-          <h3>Domain Registration</h3>
-          <p>Secure your brand identity.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <i data-lucide="server"></i>
-          <h3>Enterprise Software</h3>
-          <p>Scalable and secure systems.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <i data-lucide="lightbulb"></i>
-          <h3>Consultancy</h3>
-          <p>Expert digital strategy guidance.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools & Technologies Section -->
-    <section id="tools" class="relative py-24 gradient-bg-1 overflow-hidden">
-      <!-- Title -->
-      <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-        <h2
-          class="text-4xl md:text-5xl font-extrabold text-primary mb-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
-        >
-          Tools & <span class="text-secondary">Technologies</span>
-        </h2>
-        <p class="text-blue-900/70 max-w-2xl mx-auto">
-          These are the tools and frameworks I use to build modern web
-          applications.
-        </p>
-      </div>
-
-      <!-- Icons Container -->
-      <div
-        class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-12"
-      >
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-          alt="Java"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-          alt="Spring Boot"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg"
-          alt="Hibernate"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-          alt="MySQL"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-          alt="PostgreSQL"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://img.icons8.com/color/48/microsoft-sql-server.png"
-          alt="MS SQL Server"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-          alt="HTML5"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-          alt="CSS3"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-          alt="JavaScript"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-          alt="TypeScript"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-          alt="Angular"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-          alt="GitHub"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-          alt="Git"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-          alt="Tailwind CSS"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
-          alt="IntelliJ IDEA"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-          alt="Postman"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-          alt="VS Code"
-          class="tool-icon w-14 h-14"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
-          alt="Windows"
-          class="tool-icon w-14 h-14"
-        />
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="relative py-24 gradient-bg-1 overflow-hidden">
-      <div
-        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
-      >
-        <!-- Content (LEFT) -->
-        <div class="space-y-6">
-          <!-- Title (FULL WIDTH) -->
-          <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2
-              class="about-item text-4xl md:text-5xl font-extrabold leading-tight"
-            >
-              <span
-                class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
-              >
-                About Us
-              </span>
-            </h2>
+    <!-- ========== ABOUT ========== -->
+    <section class="section section--alt" id="about">
+      <div class="kanji kanji--section" aria-hidden="true">私たち</div>
+      <div class="container about">
+        <div class="about__text">
+          <div class="reveal">
+            <span class="eyebrow">// about</span>
+            <h2>About <span class="grad">Us</span></h2>
           </div>
 
-          <!-- Main Text -->
-          <div
-            class="about-item bg-white/60 backdrop-blur-xl p-6 rounded-2xl shadow-xl"
-          >
-            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">
-              Who We Are
-            </h3>
-
-            <p class="text-blue-900/70 leading-relaxed">
-              We create professional websites, business emails, and company
+          <div class="glass reveal about__card">
+            <h3>Who We Are</h3>
+            <p>
+              We create professional websites, business emails and company
               portfolios, plus domain registration services to help your brand
               thrive online. We also provide consultancy and enterprise software
               development, delivering scalable and secure digital solutions
@@ -777,455 +585,486 @@
             </p>
           </div>
 
-          <!-- Features -->
-          <div class="grid grid-cols-2 gap-4">
-            <div
-              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
-            >
-              <i data-lucide="globe" class="text-secondary"></i>
-              <p class="text-blue-900/80">Web Development</p>
+          <div class="chips-grid">
+            <div class="mini reveal">
+              <i data-lucide="globe"></i> Web Development
             </div>
-
-            <div
-              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
-            >
-              <i data-lucide="mail" class="text-secondary"></i>
-              <p class="text-blue-900/80">Business Emails</p>
+            <div class="mini reveal">
+              <i data-lucide="mail"></i> Business Emails
             </div>
-
-            <div
-              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
-            >
-              <i data-lucide="building" class="text-secondary"></i>
-              <p class="text-blue-900/80">Company Portfolios</p>
+            <div class="mini reveal">
+              <i data-lucide="building"></i> Company Portfolios
             </div>
-
-            <div
-              class="about-item bg-white/60 backdrop-blur-lg p-4 rounded-xl shadow-md flex items-center gap-3"
-            >
-              <i data-lucide="cpu" class="text-secondary"></i>
-              <p class="text-blue-900/80">Enterprise Software</p>
+            <div class="mini reveal">
+              <i data-lucide="cpu"></i> Enterprise Software
             </div>
           </div>
 
-          <!-- CTA -->
-          <div class="about-item">
-            <a
-              href="#contact"
-              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-            >
-              Work With Us
-            </a>
-          </div>
+          <a href="#contact" class="btn reveal">Work With Us</a>
         </div>
 
-        <!-- Image (RIGHT) -->
-        <div class="about-item flex justify-center">
-          <img
-            src="./images/about.jpg"
-            alt="About Us"
-            class="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-2xl shadow-2xl border-4 border-blue-300"
-          />
+        <div class="about__img reveal">
+          <div class="frame">
+            <img
+              src="./images/about.jpg"
+              alt="About Basildon Digital"
+              loading="lazy"
+            />
+          </div>
+          <div class="sfx sfx--float">ゴゴゴ</div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="relative py-24 gradient-bg-1 overflow-hidden">
-      <div
-        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center animate-contact"
-      >
-        <!-- Left: Image -->
-        <div class="flex justify-center">
-          <img
-            src="./images/contact.jpg"
-            alt="Customer Support"
-            class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-4 border-blue-300"
-          />
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="kanji kanji--section" aria-hidden="true">連絡</div>
+      <div class="container contact">
+        <div class="contact__img reveal">
+          <div class="frame">
+            <img
+              src="./images/contact.jpg"
+              alt="Customer Support"
+              loading="lazy"
+            />
+          </div>
         </div>
 
-        <!-- Right: Content -->
-        <div>
-          <h2
-            class="text-4xl md:text-5xl font-extrabold text-primary mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
-          >
-            Get In <span class="text-secondary">Touch</span>
-          </h2>
-
-          <p class="text-blue-900/70 mb-8">
+        <div class="contact__body reveal">
+          <span class="eyebrow">// contact</span>
+          <h2>Get In <span class="grad">Touch</span></h2>
+          <p class="lead">
             Have a project in mind or need a professional website? Reach out and
-            let’s build something amazing together.
+            let's build something amazing together.
           </p>
 
-          <!-- Contact Info -->
-          <div class="space-y-4 mb-8">
-            <p class="text-blue-900/80">
-              Email: <span class="font-semibold">info@basildon.co.zw</span>
-            </p>
-            <p class="text-blue-900/80">
-              Phone:
-              <span class="font-semibold">+263 776 679 801</span>
-            </p>
-            <p class="text-blue-900/80">
-              WhatsApp:
-              <span class="font-semibold">+263 711 616 964</span>
-            </p>
-            <p class="text-blue-900/80">
-              Open Hours:
-              <span class="font-semibold"
-                >Sunday – Fri (8:00 AM – 5:00 PM)</span
-              >
-            </p>
-          </div>
+          <ul class="info">
+            <li>
+              <i data-lucide="mail"></i>
+              <div>
+                <small>Email</small
+                ><a href="mailto:info@basildon.co.zw">info@basildon.co.zw</a>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <div>
+                <small>Phone</small
+                ><a href="tel:+263776679801">+263 776 679 801</a>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="message-circle"></i>
+              <div>
+                <small>WhatsApp</small
+                ><a
+                  href="https://wa.me/263711616964"
+                  target="_blank"
+                  rel="noopener"
+                  >+263 711 616 964</a
+                >
+              </div>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <div>
+                <small>Open Hours</small
+                ><span>Sunday – Fri (8:00 AM – 5:00 PM)</span>
+              </div>
+            </li>
+          </ul>
 
-          <!-- Social Icons -->
-          <div class="flex gap-6">
-            <a
-              href="#"
-              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-400/50 transition"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg"
-                class="w-6 h-6"
-              />
-            </a>
-
+          <div class="socials">
+            <a href="#" class="social" aria-label="X / Twitter"
+              ><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
+                alt=""
+            /></a>
             <a
               href="https://www.facebook.com/profile.php?id=61580684531598"
-              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-400/50 transition"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
-                class="w-6 h-6"
-              />
-            </a>
-
+              target="_blank"
+              rel="noopener"
+              class="social"
+              aria-label="Facebook"
+              ><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                alt=""
+            /></a>
             <a
               href="https://wa.me/message/COMUFSAVLLX6P1"
-              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-green-400/50 transition"
-            >
-              <img
-                src="https://img.icons8.com/color/48/whatsapp--v1.png"
-                class="w-6 h-6"
-              />
-            </a>
-
+              target="_blank"
+              rel="noopener"
+              class="social"
+              aria-label="WhatsApp"
+              ><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                alt=""
+            /></a>
             <a
               href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
-              class="social-icon bg-white p-3 rounded-xl shadow-md hover:shadow-blue-500/50 transition"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                class="w-6 h-6"
-              />
-            </a>
+              target="_blank"
+              rel="noopener"
+              class="social"
+              aria-label="LinkedIn"
+              ><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                alt=""
+            /></a>
           </div>
 
-          <!-- CTA Button -->
-          <div class="mt-10">
-            <a
-              href="https://wa.me/message/COMUFSAVLLX6P1"
-              class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-600/70 hover:scale-105 transition-all duration-300"
-            >
-              Send Message
-            </a>
-          </div>
+          <a
+            href="https://wa.me/message/COMUFSAVLLX6P1"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--lg"
+            >Send Message</a
+          >
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer
-      class="relative bg-white border-t border-blue-100 py-12 overflow-hidden"
-    >
-      <!-- Glow Background Accent -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div
-          class="w-72 h-72 bg-blue-400/20 blur-3xl rounded-full absolute -top-10 -left-10"
-        ></div>
-        <div
-          class="w-72 h-72 bg-indigo-400/20 blur-3xl rounded-full absolute bottom-0 right-0"
-        ></div>
-      </div>
-
-      <div
-        class="relative max-w-7xl mx-auto px-6 text-center flex flex-col items-center"
-      >
-        <!-- Logo -->
-        <img
-          src="./images/logo.png"
-          alt="Basildon Logo"
-          class="w-44 mb-4 opacity-90 hover:opacity-100 transition duration-300"
-        />
-
-        <!-- Brand Name -->
-        <h3 class="text-2xl md:text-3xl font-extrabold mb-2 tracking-wide">
-          <span
-            class="bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent"
-          >
-            Basildon
-          </span>
-          <span class="text-blue-900/80 ml-1"> Digital </span>
-        </h3>
-
-        <!-- Tagline -->
-        <p class="text-blue-900/70 mb-6 max-w-md">
-          Building modern, scalable, and impactful digital solutions.
-        </p>
-
-        <!-- Divider -->
-        <div
-          class="w-24 h-1 mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6"
-        ></div>
-
-        <!-- Social Icons -->
-        <div class="flex justify-center gap-6 mb-6">
-          <a href="" class="footer-icon">
-            <img
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <svg class="footer__mark"><use href="#bd-mark" /></svg>
+        <h3><span class="grad">Basildon</span> Digital</h3>
+        <p>Building modern, scalable and impactful digital solutions.</p>
+        <div class="divider"></div>
+        <div class="socials socials--sm">
+          <a href="#" class="social" aria-label="X"
+            ><img
               src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
-              class="w-5 h-5"
-            />
-          </a>
+              alt=""
+          /></a>
           <a
             href="https://www.facebook.com/profile.php?id=61580684531598"
-            class="footer-icon"
-          >
-            <img
+            target="_blank"
+            rel="noopener"
+            class="social"
+            aria-label="Facebook"
+            ><img
               src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-              class="w-5 h-5"
-            />
-          </a>
-          <a href="https://wa.me/message/COMUFSAVLLX6P1" class="footer-icon">
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
-              class="w-5 h-5"
-            />
-          </a>
+              alt=""
+          /></a>
           <a
-            href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
-            class="footer-icon"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-              class="w-5 h-5"
-            />
-          </a>
-        </div>
-
-        <!-- Copyright -->
-        <p class="text-sm text-blue-900/60">
-          © 2026 Basildon Digital. All rights reserved.
-        </p>
-
-        <!-- Credit -->
-        <p class="text-sm mt-2 text-blue-900/70">
-          Proudly designed by
+            href="https://wa.me/message/COMUFSAVLLX6P1"
+            target="_blank"
+            rel="noopener"
+            class="social"
+            aria-label="WhatsApp"
+            ><img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+              alt=""
+          /></a>
           <a
             href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
             target="_blank"
-            class="font-semibold text-secondary hover:underline"
-          >
-            Basil
-          </a>
-        </p>
+            rel="noopener"
+            class="social"
+            aria-label="LinkedIn"
+            ><img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+              alt=""
+          /></a>
+        </div>
+        <small>© 2026 Basildon Digital. All rights reserved.</small>
+        <small
+          >Proudly designed by
+          <a
+            href="https://www.linkedin.com/in/basildon-shumba-b038a3202"
+            target="_blank"
+            rel="noopener"
+            class="grad"
+            >Basil</a
+          ></small
+        >
       </div>
     </footer>
-  </body>
 
-  <!-- Script -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
-  <script>
-    lucide.createIcons();
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
-    const slider = document.getElementById("slider");
-    const dots = document.querySelectorAll(".dot");
+      /* ---------- Mobile menu + nav state ---------- */
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+      const nav = document.getElementById("nav");
+      const progress = document.getElementById("progress");
 
-    let index = 0;
-    const totalSlides = 5;
-
-    function showSlide(i) {
-      slider.style.transform = `translateX(-${i * 100}%)`;
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle("bg-white", idx === i);
-        dot.classList.toggle("bg-white/50", idx !== i);
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("open");
+        navLinks.classList.toggle("open");
       });
-    }
+      navLinks.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          menuBtn.classList.remove("open");
+          navLinks.classList.remove("open");
+        }),
+      );
 
-    function nextSlide() {
-      index = (index + 1) % totalSlides;
-      showSlide(index);
-    }
-
-    // Auto slide
-    setInterval(nextSlide, 5000);
-
-    // Dots click
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        index = i;
-        showSlide(index);
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 30);
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (window.scrollY / h) * 100 + "%";
       });
-    });
 
-    // Swipe support
-    let startX = 0;
+      /* ---------- Hero slider (anime.js) ---------- */
+      const slides = [...document.querySelectorAll(".slide")];
+      const dotsWrap = document.getElementById("dots");
+      let current = 0,
+        timer;
 
-    slider.addEventListener("touchstart", (e) => {
-      startX = e.touches[0].clientX;
-    });
+      slides.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.className = "dot";
+        d.setAttribute("aria-label", "Go to slide " + (i + 1));
+        d.addEventListener("click", () => {
+          goTo(i);
+          restart();
+        });
+        dotsWrap.appendChild(d);
+      });
+      const dots = [...dotsWrap.children];
 
-    slider.addEventListener("touchend", (e) => {
-      let endX = e.changedTouches[0].clientX;
-
-      if (startX - endX > 50) {
-        nextSlide();
-      } else if (endX - startX > 50) {
-        index = (index - 1 + totalSlides) % totalSlides;
-        showSlide(index);
+      function animateSlide(slide) {
+        if (reduceMotion) return;
+        anime
+          .timeline({ easing: "easeOutExpo" })
+          .add({
+            targets: slide.querySelectorAll(".slide__text .anim"),
+            opacity: [0, 1],
+            translateY: [40, 0],
+            skewX: [-8, 0],
+            delay: anime.stagger(110),
+            duration: 900,
+          })
+          .add(
+            {
+              targets: slide.querySelector(".slide__card"),
+              opacity: [0, 1],
+              translateX: [80, 0],
+              rotate: [4, 0],
+              duration: 1000,
+            },
+            200,
+          )
+          .add(
+            {
+              targets: slide.querySelectorAll(".bar i"),
+              width: (el) => el.style.getPropertyValue("--w"),
+              delay: anime.stagger(120),
+              duration: 900,
+            },
+            500,
+          );
       }
-    });
 
-    showSlide(index);
-  </script>
-  <!-- Services -->
-  <script>
-    const cards = document.querySelectorAll(".service-card");
+      function goTo(i) {
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("on");
+        current = i;
+        slides[current].classList.add("active");
+        dots[current].classList.add("on");
+        animateSlide(slides[current]);
+      }
+      function restart() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo((current + 1) % slides.length), 6000);
+      }
 
-    function revealSequential() {
-      const triggerPoint = window.innerHeight - 100;
+      goTo(0);
+      restart();
 
-      cards.forEach((card, index) => {
-        const top = card.getBoundingClientRect().top;
-
-        if (top < triggerPoint && top > 0) {
-          setTimeout(() => {
-            card.classList.add("active");
-          }, index * 150);
-        } else {
-          card.classList.remove("active");
-        }
+      // swipe
+      let sx = 0;
+      const slidesEl = document.getElementById("slides");
+      slidesEl.addEventListener(
+        "touchstart",
+        (e) => (sx = e.touches[0].clientX),
+        { passive: true },
+      );
+      slidesEl.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].clientX - sx;
+        if (dx < -50) goTo((current + 1) % slides.length);
+        else if (dx > 50) goTo((current - 1 + slides.length) % slides.length);
+        restart();
       });
-    }
 
-    window.addEventListener("scroll", revealSequential);
-  </script>
-  <!-- Portfolio -->
-  <script>
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
+      /* ---------- Hero speed lines ---------- */
+      const lines = document.querySelector(".speedlines");
+      for (let i = 0; i < 28; i++) {
+        const l = document.createElement("i");
+        l.style.top = Math.random() * 100 + "%";
+        l.style.width = 120 + Math.random() * 280 + "px";
+        l.style.opacity = 0.15 + Math.random() * 0.4;
+        lines.appendChild(l);
+      }
+      if (!reduceMotion) {
+        anime({
+          targets: ".speedlines i",
+          translateX: ["-30vw", "130vw"],
+          duration: () => anime.random(1400, 3600),
+          delay: () => anime.random(0, 3000),
+          easing: "linear",
+          loop: true,
+        });
+      }
 
-    function revealPortfolio() {
-      const trigger = window.innerHeight - 100;
-
-      portfolioItems.forEach((item, index) => {
-        const top = item.getBoundingClientRect().top;
-
-        if (top < trigger && top > -100) {
-          setTimeout(() => {
-            item.classList.add("active");
-          }, index * 200);
-        } else {
-          item.classList.remove("active");
+      /* ---------- Sakura petals ---------- */
+      if (!reduceMotion) {
+        const wrap = document.getElementById("petals");
+        for (let i = 0; i < 16; i++) {
+          const p = document.createElement("span");
+          p.className = "petal";
+          const s = 8 + Math.random() * 12;
+          p.style.width = s + "px";
+          p.style.height = s * 0.75 + "px";
+          p.style.left = Math.random() * 100 + "%";
+          wrap.appendChild(p);
         }
+        anime({
+          targets: ".petal",
+          translateY: [-40, () => window.innerHeight + 60],
+          translateX: () => anime.random(-120, 120),
+          rotate: () => anime.random(180, 720),
+          duration: () => anime.random(9000, 17000),
+          delay: () => anime.random(0, 9000),
+          easing: "linear",
+          loop: true,
+        });
+      }
+
+      /* ---------- Floating orbs ---------- */
+      if (!reduceMotion) {
+        anime({
+          targets: ".orb--1",
+          translateY: [-30, 30],
+          translateX: [-20, 20],
+          direction: "alternate",
+          loop: true,
+          easing: "easeInOutSine",
+          duration: 6000,
+        });
+        anime({
+          targets: ".orb--2",
+          translateY: [30, -30],
+          translateX: [20, -20],
+          direction: "alternate",
+          loop: true,
+          easing: "easeInOutSine",
+          duration: 7500,
+        });
+        anime({
+          targets: ".scroll-hint span",
+          translateY: [0, 14],
+          opacity: [1, 0],
+          loop: true,
+          easing: "easeInOutQuad",
+          duration: 1400,
+        });
+        anime({
+          targets: ".logo__mark",
+          rotate: [-8, 0],
+          scale: [0.7, 1],
+          duration: 1200,
+          easing: "easeOutElastic(1, .6)",
+        });
+      }
+
+      /* ---------- Scroll reveal ---------- */
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            revealObs.unobserve(el);
+            if (reduceMotion) {
+              el.style.opacity = 1;
+              return;
+            }
+            anime({
+              targets: el,
+              opacity: [0, 1],
+              translateY: [50, 0],
+              scale: [0.96, 1],
+              duration: 900,
+              easing: "easeOutExpo",
+            });
+
+            const counter = el.querySelector("[data-count]");
+            if (counter) {
+              const end = +counter.dataset.count,
+                suffix = counter.dataset.suffix || "+";
+              const o = { v: 0 };
+              anime({
+                targets: o,
+                v: end,
+                round: 1,
+                duration: 1600,
+                easing: "easeOutExpo",
+                update: () => (counter.textContent = o.v + suffix),
+              });
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObs.observe(el));
+
+      /* ---------- Tools stagger ---------- */
+      const toolsObs = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0].isIntersecting) return;
+          toolsObs.disconnect();
+          if (reduceMotion) {
+            document
+              .querySelectorAll(".tool")
+              .forEach((t) => (t.style.opacity = 1));
+            return;
+          }
+          anime({
+            targets: ".tool",
+            opacity: [0, 1],
+            translateY: [40, 0],
+            scale: [0.6, 1],
+            delay: anime.stagger(70, { grid: [6, 3], from: "center" }),
+            duration: 800,
+            easing: "easeOutBack",
+          });
+        },
+        { threshold: 0.2 },
+      );
+      toolsObs.observe(document.querySelector(".tools"));
+
+      /* ---------- 3D tilt on cards ---------- */
+      document.querySelectorAll(".tilt").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(700px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg) translateY(-6px)`;
+        });
+        card.addEventListener("mouseleave", () => (card.style.transform = ""));
       });
-    }
 
-    window.addEventListener("scroll", revealPortfolio);
-  </script>
-  <!-- Portfolio Animation Script -->
-  <script>
-    const toolIcons = document.querySelectorAll(".tool-icon");
-
-    // Set initial state
-    toolIcons.forEach((icon) => {
-      icon.classList.add("opacity-0", "translate-y-6");
-    });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Animate icons one by one
-            toolIcons.forEach((icon, index) => {
-              setTimeout(() => {
-                icon.classList.remove("opacity-0", "translate-y-6");
-                icon.classList.add("opacity-100", "translate-y-0");
-              }, index * 150); // 150ms stagger
-            });
-          } else {
-            // Reset icons to animate again when re-entering
-            toolIcons.forEach((icon) => {
-              icon.classList.add("opacity-0", "translate-y-6");
-              icon.classList.remove("opacity-100", "translate-y-0");
-            });
-          }
+      /* ---------- Intro hero timeline ---------- */
+      if (!reduceMotion) {
+        anime({
+          targets: ".kanji--hero",
+          opacity: [0, 0.08],
+          translateX: [-60, 0],
+          duration: 1800,
+          easing: "easeOutExpo",
         });
-      },
-      { threshold: 0.2 },
-    );
-
-    observer.observe(document.querySelector("#tools"));
-  </script>
-
-  <!--Tools Animation Script -->
-  <script>
-    const contactSection = document.querySelector(".animate-contact");
-
-    const contactObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            contactSection.classList.add("opacity-100", "translate-y-0");
-            contactSection.classList.remove("opacity-0", "translate-y-12");
-          } else {
-            contactSection.classList.add("opacity-0", "translate-y-12");
-            contactSection.classList.remove("opacity-100", "translate-y-0");
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    contactObserver.observe(contactSection);
-  </script>
-
-  <!-- About -->
-  <script>
-    const aboutItems = document.querySelectorAll(".about-item");
-
-    // initial state
-    aboutItems.forEach((item) => {
-      item.classList.add("opacity-0", "translate-y-10");
-    });
-
-    const aboutObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            aboutItems.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.remove("opacity-0", "translate-y-10");
-                item.classList.add("opacity-100", "translate-y-0");
-              }, index * 150);
-            });
-          } else {
-            // reset when leaving view
-            aboutItems.forEach((item) => {
-              item.classList.add("opacity-0", "translate-y-10");
-              item.classList.remove("opacity-100", "translate-y-0");
-            });
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    aboutObserver.observe(document.querySelector("#about"));
-  </script>
+      }
+    </script>
+  </body>
 </html>
